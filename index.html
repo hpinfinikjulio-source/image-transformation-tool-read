@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Transformation Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Image Transformation Tool</h1>
+
+        <div class="upload-section">
+            <div class="input-group">
+                <label for="baseImageInput">Upload Base Image (Pixels to use):</label>
+                <input type="file" id="baseImageInput" accept="image/*">
+                <p>Base Image (64x64):</p>
+                <canvas id="baseCanvas"></canvas>
+            </div>
+            <div class="input-group">
+                <label for="targetImageInput">Upload Target Image (Image to recreate):</label>
+                <input type="file" id="targetImageInput" accept="image/*">
+                <p>Target Image (64x64):</p>
+                <canvas id="targetCanvas"></canvas>
+            </div>
+        </div>
+
+        <button id="transformButton">Transform Image</button>
+
+        <div class="output-section">
+            <h2>Transformed Image (64x64)</h2>
+            <canvas id="outputCanvas"></canvas>
+        </div>
+
+        <div class="debug-section">
+            <h2>Base Image Pixel Counts (Debug)</h2>
+            <div id="basePixelDebugOutput" class="pixel-count-list">
+                <p>Upload a base image to see pixel counts here.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
